@@ -32,5 +32,7 @@ int main() {
     
     delete length;
     delete pass;
+    int *x = new int;
+    std::cin >>*x;
     return 0;
 }
