@@ -5,14 +5,14 @@ int main() {
     int *length = new int();//Size of password value
     int *temp = new int();//Temporary character value storage
     
-    std::cout<< "Password length : ";//Asks user for password size
+    std::cout << "Password length : ";//Asks user for password size
     std::cin >> *length;//Gets the input and stores it 
     
     std::srand(time(NULL));//Seed initialization
     
     while (pass -> length() < *length){//Keeps generating random values until they fit character ranges for the password
         *temp = char(std::rand() % 122);//Storing character values temporarily
-        if (*temp <= 90 && *temp >= 65){//Range for capital-case letters
+        if (*temp <= 90 && *temp >= 65){//Range for capital letters
             *pass += *temp;
         }
         if (*temp <= 122 && *temp >= 97){//Range for common-case letters
@@ -30,9 +30,8 @@ int main() {
     
     std::cout << *pass <<std::endl;
     
-    delete length;
-    delete pass;
+    delete length; delete pass;
     int *x = new int;
-    std::cin >>*x;
+    std::cin >> *x;
     return 0;
 }
